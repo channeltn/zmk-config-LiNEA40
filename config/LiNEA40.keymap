@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -173,10 +173,10 @@
 
         Win_Func {
             bindings = <
-&trans                      &kp F7  &kp F8  &kp F9  &kp F10                    &kp LC(LG(F4))      &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)    &kp LC(LG(RIGHT_ARROW))  &kp LA(PRINTSCREEN)
-&kp LS(LC(ESCAPE))          &kp F4  &kp F5  &kp F6  &kp F11                    &kp LA(SPACE)       &kp LS(LC(TAB))         &kp LS(LC(T))  &kp LC(TAB)              &kp LS(DELETE)
-&mt LEFT_SHIFT KP_NUMBER_0  &kp F1  &kp F2  &kp F3  &kp F12                    &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)     &mkp MB1       &mkp MB2                 &mkp MB3
-&trans                      &trans  &trans  &trans  &trans   &trans    &trans  &trans                                      &trans         &trans                   &trans
+&trans              &kp F7  &kp F8  &kp F9  &kp F10                    &kp LC(LG(F4))      &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)    &kp LC(LG(RIGHT_ARROW))  &kp LA(PRINTSCREEN)
+&kp LS(LC(ESCAPE))  &kp F4  &kp F5  &kp F6  &kp F11                    &kp LA(SPACE)       &kp LS(LC(TAB))         &kp LS(LC(T))  &kp LC(TAB)              &kp LS(DELETE)
+&kp LEFT_SHIFT      &kp F1  &kp F2  &kp F3  &kp F12                    &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)     &mkp MB1       &mkp MB2                 &mkp MB3
+&trans              &trans  &trans  &trans  &trans   &trans    &trans  &trans                                      &trans         &trans                   &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -208,15 +208,15 @@
 
         //5
 
-        SCROLL {
+        Mac_Func {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                    &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                    &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&trans    &trans                  &trans        &trans                   &trans  &trans    &trans  &kp NUMBER_0                   &kp NUMBER_0  &kp DOT       &kp QUESTION
+&kp LC(LG(S))   &kp F7  &kp F8  &kp F9  &kp F10                    &trans              &kp LC(LEFT_ARROW)   &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)  &trans
+&trans          &kp F4  &kp F5  &kp F6  &kp F11                    &trans              &kp LS(LC(TAB))      &kp LS(LG(T))     &kp LC(TAB)          &trans
+&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F12                    &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &mkp MB1          &mkp MB2             &mkp MB3
+&trans          &trans  &trans  &trans  &trans   &trans    &trans  &trans                                   &trans            &trans               &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         //6
