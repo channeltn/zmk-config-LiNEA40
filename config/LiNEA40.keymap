@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,
+            //スクロール方向を逆転,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -197,15 +197,13 @@
 
         //4
 
-        FUNCTION {
+        Mac_Mark {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans      &trans  &kp LA(PRINTSCREEN)  &trans  &kp LC(LA(DELETE))
-&kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &trans      &trans  &kp LS(LG(S))        &trans  &kp LC(LS(ESCAPE))
-&trans  &trans  &trans  &kp F11  &kp F12                    &kp C_MUTE  &trans  &trans               &trans  &kp LC(LA(INS))
-&trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans              &trans               &trans  &trans
+&kp LA(Y)  &kp SINGLE_QUOTE  &kp PLUS           &kp ASTERISK   &kp PIPE                          &kp GRAVE    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
+&kp TILDE  &kp DLLR          &kp PERCENT        &kp AMPERSAND  &kp EQUAL                         &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp COLON
+&kp CARET  &kp EXCLAMATION   &kp DOUBLE_QUOTES  &kp HASH       &kp UNDERSCORE                    &kp MINUS    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH      &kp QUESTION
+&trans     &trans            &trans             &trans         &trans          &trans    &trans  &trans                             &trans                 &trans         &trans
             >;
-
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         //5
