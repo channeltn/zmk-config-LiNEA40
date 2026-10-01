@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -162,16 +162,14 @@
 
         Win_Default {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R    &kp T                                           &kp Y                        &kp U  &kp I      &kp O       &mt LEFT_ALT P
-&lt 6 A           &kp S         &kp D         &kp F    &kp G                                           &kp H                        &kp J  &kp K      &kp L       &kp TAB
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V    &kp B                                           &kp N                        &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT MINUS
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &lt 6 INT_MUHENKAN  &lt 2 SPACE    &lt 1 ENTER  &mt LEFT_CONTROL INT_HENKAN         &mo 7      &mo 2       &lt 2 ESCAPE
+&kp Q             &kp W         &kp E         &kp R    &kp T                                         &kp Y                        &kp U  &kp I      &kp O       &mt LEFT_ALT P
+&lt 5 A           &kp S         &kp D         &kp F    &kp G                                         &kp H                        &kp J  &kp K      &kp L       &kp TAB
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V    &kp B                                         &kp N                        &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT MINUS
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp INS  &lt 5 LANGUAGE_2  &lt 2 SPACE    &lt 1 ENTER  &mt LEFT_CONTROL LANGUAGE_1         &mo 7      &mo 2       &lt 2 ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
-
-        //1
 
         Win_Mark {
             bindings = <
@@ -184,8 +182,6 @@
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
-        //2
-
         Win_Func {
             bindings = <
 &trans              &kp F7  &kp F8  &kp F9  &kp F10                    &kp LC(LG(F4))      &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)    &kp LC(LG(RIGHT_ARROW))  &kp LA(PRINTSCREEN)
@@ -197,20 +193,16 @@
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
-        //3
-
         Mac_Default {
             bindings = <
 &kp Q             &kp W             &kp E         &kp R   &kp T                                         &kp Y                    &kp U  &kp I      &kp O       &mt LEFT_ALT P
-&lt 6 A           &kp S             &kp D         &kp F   &kp G                                         &kp H                    &kp J  &kp K      &kp L       &kp TAB
+&lt 5 A           &kp S             &kp D         &kp F   &kp G                                         &kp H                    &kp J  &kp K      &kp L       &kp TAB
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V   &kp B                                         &kp N                    &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT MINUS
-&kp LEFT_WIN      &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &lt 6 LANGUAGE_2  &lt 5 SPACE    &lt 4 ENTER  &mt LEFT_WIN LANGUAGE_1         &mo 7      &mo 5       &lt 5 ESCAPE
+&kp LEFT_WIN      &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &lt 5 LANGUAGE_2  &lt 6 SPACE    &lt 4 ENTER  &mt LEFT_WIN LANGUAGE_1         &mo 7      &mo 6       &lt 6 ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
-
-        //4
 
         Mac_Mark {
             bindings = <
@@ -223,7 +215,16 @@
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
-        //5
+        Move_Num {
+            bindings = <
+&kp LEFT_SHIFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                    &kp PAGE_UP    &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_DOWN
+&kp NUMBER_0    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                    &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp DELETE
+&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                    &trans         &trans          &kp COMMA     &kp PERIOD       &trans
+&trans          &trans        &trans        &trans        &trans  &trans    &trans  &trans                         &trans        &trans           &trans
+            >;
+
+            sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
+        };
 
         Mac_Func {
             bindings = <
@@ -234,19 +235,6 @@
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
-        };
-
-        //6
-
-        Move_Num {
-            bindings = <
-&kp LEFT_SHIFT  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                    &kp PAGE_UP    &kp HOME        &kp UP_ARROW  &kp END          &kp PAGE_DOWN
-&kp NUMBER_0    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                    &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp DELETE
-&trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                    &trans         &trans          &kp COMMA     &kp PERIOD       &trans
-&trans          &trans        &trans        &trans        &trans  &trans    &trans  &trans                         &trans        &trans           &trans
-            >;
-
-            sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
         };
 
         Adjust {
