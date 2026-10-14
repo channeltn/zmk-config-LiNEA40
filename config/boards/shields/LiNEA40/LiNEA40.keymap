@@ -39,6 +39,15 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
+
+        // 速度を5分の1にするスケーラーを定義 20261015
+        snipe_scaler: snipe_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            codes = <INPUT_REL_X INPUT_REL_Y>;
+            track-remainders;
+        };
     };
 };
 
@@ -55,6 +64,16 @@
         layers = <SCROLL>;
         input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT> //スクロール方向を逆転
                          , <&zip_xy_to_scroll_mapper>;
+    };
+
+    //通常時の速度は1倍 20261015
+    status = "okay";
+    input-processors = <&zip_xy_scaler 1 1>; // 通常時の速度
+
+    // レイヤー7（SNIPE）がオンの時、1/5の速度を適用 20261015
+    snipe_layer {
+        layers = <7>; 
+        input-processors = <&snipe_scaler 1 5>; // SNIPE時の速度
     };
 };
 
