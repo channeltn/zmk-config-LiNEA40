@@ -58,6 +58,13 @@
     };
 };
 
+// Snipe mode for Layer 7 20261021
+&trackball_listener {
+    snipe {
+        layers = <7>;
+        input-processors = <&zip_xy_scaler 1 3>;
+    };
+};
 
 
 / {
