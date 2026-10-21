@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -149,7 +149,8 @@
         ForwardWordDelete_Mac: ForwardWordDeleteForMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp CAPSLOCK &kp LA(BACKSPACE)>;
+            bindings = <&kp CAPSLOCK &kp LA(BACKSPACE)>, <&macro_wait_time 200>;
+
             label = "FORWARDWORDDELETEFORMAC";
         };
     };
