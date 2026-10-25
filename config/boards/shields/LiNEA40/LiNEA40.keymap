@@ -7,6 +7,13 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+#define MOUSE 1
+#define MARK 2
+#define CURSOR 3
+#define FUNCTION 4
+#define SCROLL 5
+#define WIRELESS 6
+
 // OS設定を日本語キーボードのまま使用するための変換定義
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
@@ -119,12 +126,14 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
         mouse_scrl: mouse_wheel_scrl {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <20>;
         };
+
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -136,6 +145,7 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 35 36 37 38 39 40>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
